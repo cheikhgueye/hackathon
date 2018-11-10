@@ -1,0 +1,75 @@
+<ion-header>
+  <ion-navbar [color]="isRecording ? 'head' : 'head'">
+    <ion-title>
+      <ion-icon name="logo-bitcoin" color="or"></ion-icon>{{gain}}
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+
+
+
+<div cards>
+
+  <div class="grid-full">
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <img  src="{{data1?.image[0]}}" />
+
+        </ion-card>
+      </ion-col>
+
+      <ion-col>
+        <ion-card>
+          <img  src="{{data1?.image[1]}}"  />
+
+        </ion-card>
+      </ion-col>
+
+      <ion-col>
+        <ion-card>
+          <img  src="{{data1?.image[2]}}" />
+
+        </ion-card>
+      </ion-col>
+
+      <ion-col>
+        <ion-card>
+          <img  src="{{data1?.image[3]}}" (click)="onViewImg('www/data1?.image[3]','put a title here')" />
+
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </div>
+
+</div>
+<ion-row >
+  <ion-col col-5>
+
+  </ion-col>
+  <ion-col col-3>
+    <button ion-button color="head" (click)="startListening()"><ion-icon name="microphone"></ion-icon></button>
+
+</ion-col>
+<ion-col col-4>
+
+
+
+</ion-col>
+
+
+
+</ion-row>
+
+
+
+
+</ion-content>
+
+
+
+
+
