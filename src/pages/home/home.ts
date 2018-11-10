@@ -11,9 +11,12 @@ import {Data} from '../../model/data';
 import { PhotoViewer } from '@ionic-native/photo-viewer';
 import { File } from '@ionic-native/file';
 
+
 import { ModalController } from 'ionic-angular';
 
 import { NativeAudio } from '@ionic-native/native-audio';
+import { SplashScreen } from '@ionic-native/splash-screen';
+import { SplashPage } from '../splash/splash';
 
 
 @Component({
@@ -26,7 +29,8 @@ import { NativeAudio } from '@ionic-native/native-audio';
 export class HomePage {
   matches: String[];
   tests=["Var","Neymar"]
-  isRecording= false;
+  isRecording
+  = false;
   win=false
 public datas: Data[];
 
@@ -37,15 +41,12 @@ public datas: Data[];
  locale: string;
 
 
-  constructor(private modalCtrl: ModalController, private nativeAudio: NativeAudio,private photoViewer: PhotoViewer,public navCtrl: NavController,private vibration: Vibration,private tts: TextToSpeech,
-     private speechRecognition: SpeechRecognition, private plt: Platform, private cd: ChangeDetectorRef,private data: DatasProvider) {
+  constructor( private nativeAudio: NativeAudio,private photoViewer: PhotoViewer,public navCtrl: NavController,private vibration: Vibration,private tts: TextToSpeech,
+     private speechRecognition: SpeechRecognition, private plt: Platform, private cd: ChangeDetectorRef,private data: DatasProvider,private  modalCtrl: ModalController) {
 
       this.text = 'Initial text';
       this.rate = 1;
       this.locale = 'en-US';
-  }
-  ngOnInit(){
-    this.getPermission()
   }
 
   ionViewDidLoad() {
@@ -56,7 +57,7 @@ public datas: Data[];
      /// this.data1=data2[0] as Data
 
       this.datas=data2 as Data[]
-      this.data1 = this.datas.filter(item => item.id ==2 )[0];
+      this.data1 = this.datas.filter(item => item.id ==1 )[0];
 
       console.log(data2[1])
 
@@ -90,8 +91,6 @@ public datas: Data[];
     let options = {
       language: 'fr'
     }
-
-
     this.speechRecognition.startListening().subscribe(matches => {
 
       this.matches = matches;
@@ -102,9 +101,14 @@ public datas: Data[];
 
     this.nativeAudio.play('uniqueId1').then();
           if(e1.mot==e){
-                 //this.vibration.vibrate(3000);
-           // this.playText()
-                 // this.splashScreen.show();
+
+
+
+                  let splash = this.modalCtrl.create( SplashPage);
+                  splash.present();
+
+
+
             this.data1 = this.datas.filter(item => item.id ==Number(e1.id) +1 )[0];
             this.gain=this.gain+Number(e1.gain)
           }
@@ -130,7 +134,7 @@ public datas: Data[];
 
     }
 
-   /* playText() {
+    playText() {
       const options = {
         text: "cheikh gueye",
           rate: 1.55
@@ -139,20 +143,14 @@ public datas: Data[];
       this.tts.speak(options)
       .then(() => console.log('Success'))
       .catch((reason: any) => console.log(reason));
-    }*/
+    }
 
-   /* vibrate(){
+    vibrate(){
       this.vibration.vibrate(50);
     }
     onViewImg(img, title){
       this.photoViewer.show( img, title, {share: true});
     }
- wakh(){
 
-  this.startListening()
-  setTimeout(() => {
-    this.getPermission()
-  }, 10);
- }*/
 
 }

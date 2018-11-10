@@ -3,7 +3,7 @@ import { Platform, ModalController } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { HomePage } from '../pages/home/home';
+import { AccueilPage } from '../pages/accueil/accueil';
 import { SplashPage } from '../pages/splash/splash';
 
 @Component({
@@ -11,7 +11,7 @@ import { SplashPage } from '../pages/splash/splash';
 })
 export class MyApp {
 
-    rootPage:any = HomePage;
+    rootPage:any = AccueilPage;
 
 
     constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, modalCtrl: ModalController) {
@@ -19,13 +19,10 @@ export class MyApp {
         platform.ready().then(() => {
 
             statusBar.styleDefault();
-setTimeout(() => {
+            setTimeout(() => {
+              splashScreen.hide();
+            }, 300);
 
-  let splash = modalCtrl.create(SplashPage );
-  splash.present();
-
-
-}, 100);
 
         });
 

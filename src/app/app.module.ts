@@ -7,6 +7,7 @@ import { TextToSpeech } from '@ionic-native/text-to-speech';
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
+import { AccueilPage } from '../pages/accueil/accueil';
 import { TabsPage } from '../pages/tabs/tabs';
 import { HttpClientModule } from '@angular/common/http';
 import { Vibration } from '@ionic-native/vibration';
@@ -32,7 +33,10 @@ import {NoopAnimationsModule} from '@angular/platform-browser/animations';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage,SplashPage
+    SplashPage,
+    TabsPage,SplashPage,
+    AccueilPage,
+
   ],
   imports: [
     BrowserModule,
@@ -47,7 +51,9 @@ import {NoopAnimationsModule} from '@angular/platform-browser/animations';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage,SplashPage
+    SplashPage,
+    TabsPage,SplashPage,
+    AccueilPage
   ],
   providers: [
     StatusBar,

@@ -1,18 +1,14 @@
 <ion-header>
-  <ion-navbar [color]="isRecording ? 'head' : 'head'">
+  <ion-navbar [color]="isRecording ?  'id' : 'id'">
     <ion-title>
       <ion-icon name="logo-bitcoin" color="or"></ion-icon>{{gain}}
+      <ion-icon name="star"></ion-icon>
     </ion-title>
+
   </ion-navbar>
 </ion-header>
-
 <ion-content padding>
-
-
-
-
 <div cards>
-
   <div class="grid-full">
     <ion-row>
       <ion-col>
@@ -44,12 +40,10 @@
       </ion-col>
     </ion-row>
   </div>
-
 </div>
 <ion-row >
-
   <ion-col col-12>
-   <button ion-button color="head" (click)=" startListening() "><ion-icon name="microphone"></ion-icon></button>
+   <button ion-button color="light" (click)=" startListening() "><ion-icon name="microphone" style="zoom:2.0;"></ion-icon></button>
 
 </ion-col>
 
@@ -62,8 +56,6 @@
 
 
 </ion-content>
-
-
 
 
 

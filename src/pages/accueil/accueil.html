@@ -1,0 +1,27 @@
+<div id="custom-overlay" [style.display]="splash ? 'flex': 'none'">
+  <div class="flb">
+      <div class="Aligner-item Aligner-item--top"></div>
+      <img src="assets/logo.png">
+      <div class="Aligner-item Aligner-item--bottom"></div>
+  </div>
+</div>
+
+<ion-content>
+  <ion-slides pager >
+    <ion-slide class="slide1" slidesPerView>
+      <h1>4 Images 1 Mot vocal</h1>
+      <p>Jouer, cumuler des points et acheter
+        du crédit ou pass internet</p>
+        <p>C'est amusant non!</p>
+    </ion-slide>
+    <ion-slide class="slide2">
+        <h1>4 Images 1 Mot vocal</h1>
+      <p>Donner le mot qui est en colération des quatre images qui vous sont proposées </p>
+    </ion-slide>
+    <ion-slide class="slide3">
+      <p>N'attendez plus rien! </p>
+      <button ion-button round outline (click)="goToPage()" color="light">Jouer</button>
+      <br><a href="">Multijoueur</a>
+    </ion-slide>
+  </ion-slides>
+</ion-content>
