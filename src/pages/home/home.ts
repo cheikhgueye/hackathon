@@ -53,6 +53,8 @@ public datas: Data[];
 
 
 
+
+
     this.data.getDatas().subscribe(data2=>{
      /// this.data1=data2[0] as Data
 
@@ -91,7 +93,7 @@ public datas: Data[];
     let options = {
       language: 'fr'
     }
-    this.speechRecognition.startListening().subscribe(matches => {
+    this.speechRecognition.startListening(options).subscribe(matches => {
 
       this.matches = matches;
       this.cd.detectChanges();

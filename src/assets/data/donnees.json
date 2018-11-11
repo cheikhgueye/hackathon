@@ -7,20 +7,23 @@
       "assets/imgs/6/facebook3.png",
       "assets/imgs/6/facebook4.jpeg"
     ],
-    "gain":"10",
-    "mot": "facebook"
+    "gain":"5",
+    "mot": "facebook",
+    "level":1
+
 
   },
   {
     "id":"2",
     "image":[
-      "assets/imgs/2/1.jpeg",
-      "assets/imgs/2/2.svg",
-      "assets/imgs/2/3.jpg",
-      "assets/imgs/2/4.jpeg"
+      "assets/imgs/Modem/KeurguiBox1.jpg",
+      "assets/imgs/Modem/KeurGuiBox2.png",
+      "assets/imgs/Modem/keurguii.jpeg",
+      "assets/imgs/Modem/modeme.jpeg"
     ],
-    "gain":"10",
-    "mot": "Neymar"
+    "gain":"5",
+    "mot": "modem",
+    "level":1
 
 
   },
@@ -33,7 +36,8 @@
       "assets/imgs/3/4.jpg"
     ],
     "gain":"15",
-    "mot" :"baccalauréat"
+    "mot" :"baccalauréat",
+    "level":1
 
 
   },
@@ -46,7 +50,9 @@
       "assets/imgs/4/4.jpg"
     ],
     "gain":"16",
-    "mot" :"2002"
+    "description":"reseau qui vous permet de vous connecter avec vos amis",
+    "mot" :"2002",
+    "level":2
 
 
 
@@ -60,7 +66,9 @@
       "assets/imgs/5/4.jpeg"
     ],
     "gain":"18",
-    "mot":"Modou lo"
+    "mot":"Modou lo",
+    "description":"reseau qui vous permet de vous connecter avec vos amis",
+    "level":1
 
 
   }

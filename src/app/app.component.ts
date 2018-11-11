@@ -19,9 +19,11 @@ export class MyApp {
         platform.ready().then(() => {
 
             statusBar.styleDefault();
-            setTimeout(() => {
-              splashScreen.hide();
-            }, 300);
+setTimeout(() => {
+  splashScreen.hide();
+}, 300);
+
+
 
 
         });

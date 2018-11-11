@@ -15,9 +15,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   templateUrl: 'splash.html',
 })
 export class SplashPage {
-
+  time;
   constructor(public viewCtrl: ViewController, public splashScreen: SplashScreen) {
-
+ this.time=3000
   }
 
   ionViewDidEnter() {
@@ -26,8 +26,10 @@ export class SplashPage {
 
     setTimeout(() => {
       this.viewCtrl.dismiss();
-    }, 1000);
+    }, this.time);
 
   }
-
+  cli(){
+    this.time=0;
+  }
 }
